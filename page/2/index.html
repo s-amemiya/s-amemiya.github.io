@@ -44,11 +44,11 @@
     <div id="main">
       
   
-    <article id="post-dev/create-react-app" class="post">
+    <article id="post-dev/hello-sequelize" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/07/27/dev/create-react-app/" class="article-date">
-  <time datetime="2017-07-26T15:22:13.000Z" itemprop="datePublished">2017-07-27</time>
+			<a href="/2017/08/17/dev/hello-sequelize/" class="article-date">
+  <time datetime="2017-08-16T23:12:10.000Z" itemprop="datePublished">2017-08-17</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -61,15 +61,16 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/27/dev/create-react-app/">react テンプレート</a>
+      <a class="article-title" href="/2017/08/17/dev/hello-sequelize/">Sequelizeを使う</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="external">https://github.com/facebookincubator/create-react-app</a></p>
-<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></div><div class="line"></div><div class="line"><span class="built_in">create-react-app</span> <span class="string">my-app</span></div><div class="line"><span class="string">cd </span><span class="string">my-app/</span></div><div class="line"><span class="string">npm </span><span class="string">start</span></div></pre></td></tr></table></figure>
+    	<h2 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a><a href="http://docs.sequelizejs.com" target="_blank" rel="external">Sequelize</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> yarn add -D sequelize sequelize-cli</span></div><div class="line"><span class="meta">$</span><span class="bash"> sequelize init</span></div></pre></td></tr></table></figure>
+<h4 id="config-config-json-を修正する"><a href="#config-config-json-を修正する" class="headerlink" title="./config/config.json を修正する"></a><code>./config/config.json</code> を修正する</h4><h4 id="モデル作成"><a href="#モデル作成" class="headerlink" title="モデル作成"></a>モデル作成</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sequelize model:create --name <span class="keyword">order</span> <span class="title">--underscored</span> --<span class="keyword">attributes</span> user_id:<span class="keyword">string</span>,price:<span class="keyword">string</span></div></pre></td></tr></table></figure>
+<h4 id="DBに適用"><a href="#DBに適用" class="headerlink" title="DBに適用"></a>DBに適用</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sequelize db:migrate</span></div></pre></td></tr></table></figure>
 
     
 	</div>
@@ -80,7 +81,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-dev/">react, dev</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
 
 			</span>
 		</div>
@@ -94,11 +95,11 @@
 
 
   
-    <article id="post-books/2017-07-25-narnia1" class="post">
+    <article id="post-art/dessin3" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/07/25/books/2017-07-25-narnia1/" class="article-date">
-  <time datetime="2017-07-25T13:21:57.000Z" itemprop="datePublished">2017-07-25</time>
+			<a href="/2017/08/14/art/dessin3/" class="article-date">
+  <time datetime="2017-08-14T06:50:18.000Z" itemprop="datePublished">2017-08-14</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -111,16 +112,140 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/25/books/2017-07-25-narnia1/">魔術師のおい ナルニア国物語 1 (古典新訳文庫) 感想</a>
+      <a class="article-title" href="/2017/08/14/art/dessin3/">dessin3</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p>子供の頃父からナルニア国物語を薦められた。当時は読まなかった。<br>薦められて読んだのはゲド戦記だけだった。</p>
-<p>ディゴリーはりんごを食べてしまうかと思った。</p>
-<p>あとがきを読むと、光文社新書のナルニア国物語は刊行順ではなく、物語の時系列順とのこと。</p>
+    	<p>デッサン教室 8月第三回に行ってきた</p>
+<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><p>夏休みを利用して、午前中にデッサン教室に行った。</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は田丸先生。体験レッスンの時に受付とコース説明してくれた方だ。内容は前回に引き続き画用紙への円柱本番続き。開始時に輪郭の甘さと、左後ろに伸びる影をもう少し書くように指摘をもらった。2時間やって、最後に影が残ったとので時間持ち越しにした。</p>
+<h4 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h4><ul>
+<li>グラデーションのムラに気をつける</li>
+<li>縁取りが甘い、回り込むように、遠くの淵は薄く</li>
+</ul>
+<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>木曜の20時からにした</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-tennis/tennis2" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/13/tennis/tennis2/" class="article-date">
+  <time datetime="2017-08-13T00:25:50.000Z" itemprop="datePublished">2017-08-13</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/13/tennis/tennis2/">テニススクール体験 武蔵野ドームテニススクール</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="テニススクールの体験レッスンに2回行った"><a href="#テニススクールの体験レッスンに2回行った" class="headerlink" title="テニススクールの体験レッスンに2回行った"></a>テニススクールの体験レッスンに2回行った</h1><p>武蔵野ドームテニススクールの体験スクールにいった。料金は1000円、ラケットとシューズは無料で貸してもらえた。</p>
+<h1 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h1><ul>
+<li>運動不足の改善</li>
+<li>仕事以外の人と会話する機会ふやすため</li>
+</ul>
+<h1 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h1><p>レッスンは90分、コーチが2人、生徒が私いれて7人。最初の60分は基礎的なこと、ボレー、ストローク、サーブの練習。最後の30分はコーチの球出しからはじまる試合形式だった。</p>
+<h1 id="指摘してもらったこと"><a href="#指摘してもらったこと" class="headerlink" title="指摘してもらったこと"></a>指摘してもらったこと</h1><p>ストロークの時に、足が固定されていない。足が固定して体を回すとうまく打てた。</p>
+<h1 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h1><p>肘の痛みが落ち着いたら、他のスクールの体験にもいってみる。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tennis/">tennis</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-books/narnia3" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/11/books/narnia3/" class="article-date">
+  <time datetime="2017-08-11T02:58:01.000Z" itemprop="datePublished">2017-08-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/11/books/narnia3/">ナルニア国物語3　馬と少年 (光文社古典新訳文庫) 感想</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h4 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h4><p>ナルニア国物語2に引き続き</p>
+<h4 id="あらすじ"><a href="#あらすじ" class="headerlink" title="あらすじ"></a>あらすじ</h4><p>ナルニア国の隣国、カロールメン国で育ったシャスタと、カロールメン国の貴族の娘アラヴィスが出会い、ともにナルニア国を目指すお話</p>
+<h4 id="印象に残ったシーン"><a href="#印象に残ったシーン" class="headerlink" title="印象に残ったシーン"></a>印象に残ったシーン</h4><ul>
+<li>シャスタとアスランの会話</li>
+</ul>
+<p>「わたしはあなたに向かってあなたのことを語るのであり、彼女のことを語るのではない。わたしはその人自身にかかわることのみを語る」</p>
+<ul>
+<li><p>シャスタとアラヴィスが、アスランについて話すシーン</p>
+</li>
+<li><p>アラヴィスとアスランの会話</p>
+</li>
+<li>ブリーが落ち込むシーンと、アスランに慰められるシーン</li>
+</ul>
+<h4 id="受けた影響"><a href="#受けた影響" class="headerlink" title="受けた影響"></a>受けた影響</h4><p>ブリーとラバダシュをみていると、耳が痛くなるシーンが多くあった。カロールメンでは優秀であったブリーは、ナルニアや他の場所ではそうではない可能性を知った。「若いうちに愚かであることを知ることができる馬(人も同じだろう)はさいわいである」とアスランは言った。ラバダシュはアスランの話しを聞いても最後まで怒りを捨てることが出来なかった。自分にも活かしたいと感じた。</p>
+<h4 id="次に読む本"><a href="#次に読む本" class="headerlink" title="次に読む本"></a>次に読む本</h4><p>続いて、ナルニア国物語4へ</p>
 
     
 	</div>
@@ -145,11 +270,11 @@
 
 
   
-    <article id="post-art/2017-07-24-dessin" class="post">
+    <article id="post-books/narnia2" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/07/24/art/2017-07-24-dessin/" class="article-date">
-  <time datetime="2017-07-24T12:58:31.000Z" itemprop="datePublished">2017-07-24</time>
+			<a href="/2017/08/07/books/narnia2/" class="article-date">
+  <time datetime="2017-08-07T08:19:11.000Z" itemprop="datePublished">2017-08-07</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -162,15 +287,14 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/24/art/2017-07-24-dessin/">0724_art</a>
+      <a class="article-title" href="/2017/08/07/books/narnia2/">ナルニア国物語2　ライオンと魔女と衣装だんす (光文社古典新訳文庫) 感想</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<h3 id="人体のデッサン技法-Jack-Hamm-3頁目"><a href="#人体のデッサン技法-Jack-Hamm-3頁目" class="headerlink" title="人体のデッサン技法 Jack Hamm 3頁目"></a>人体のデッサン技法 Jack Hamm 3頁目</h3><p><img src="/img/07242017212814.jpg" width="400px"></p>
-<h3 id="「絵はすぐに上手くならない」-手のデッサン"><a href="#「絵はすぐに上手くならない」-手のデッサン" class="headerlink" title="「絵はすぐに上手くならない」 手のデッサン"></a>「絵はすぐに上手くならない」 手のデッサン</h3><p><img src="/img/07242017212814_001.jpg" width="400px"><br><img src="/img/07242017212814_002.jpg" width="400px"></p>
+    	<p>ナルニア国物語 ライオンと魔女と衣装だんす 読み終わった</p>
 
     
 	</div>
@@ -181,7 +305,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackhamm/">jackhamm</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/books/">books</a></li></ul>
 
 			</span>
 		</div>
@@ -195,11 +319,11 @@
 
 
   
-    <article id="post-etc/0723_about" class="post">
+    <article id="post-art/2017-08-02-dessin" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/07/23/etc/0723_about/" class="article-date">
-  <time datetime="2017-07-23T03:53:16.000Z" itemprop="datePublished">2017-07-23</time>
+			<a href="/2017/08/05/art/2017-08-02-dessin/" class="article-date">
+  <time datetime="2017-08-05T00:53:40.000Z" itemprop="datePublished">2017-08-05</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -212,19 +336,78 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/23/etc/0723_about/">about</a>
+      <a class="article-title" href="/2017/08/05/art/2017-08-02-dessin/">20170802_1</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p>ここでは次のものを出力する</p>
+    	<p>デッサン教室 初日</p>
+<p>鉛筆の削り方を教わる。芯を1cm弱、木削るのは芯の倍くらい。</p>
+<p>円錐のテスト</p>
+<p><img src="/img/20170802/1.jpg" width="400px"></p>
+<p>楕円の練習として４つ描いたけど途中なので持ち帰ってない</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/20170801" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/01/dev/20170801/" class="article-date">
+  <time datetime="2017-08-01T14:39:34.000Z" itemprop="datePublished">2017-08-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/01/dev/20170801/">20170801</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>株式会社アカツキさん主催の「ソフトウェア品質勉強会」に会社の後輩と参加してきた。</p>
+<p><a href="https://connpass.com/event/61826/" target="_blank" rel="external">https://connpass.com/event/61826/</a></p>
+<p>最近IT勉強会に参加できいなかったのと、品質管理について知識を深めたかったからだ。</p>
+<p>アカツキさんはゲーム開発がメインの会社ということだった。おしゃれオフィスと、ホワイトボードにたくさん付箋の貼ってある光景が目を引いた。</p>
+<p>印象に残った内容はこのあたり。</p>
 <ul>
-<li>開発関連で調べたもの</li>
-<li>読んだ本</li>
-<li>描いたもの</li>
+<li>テストっていうのは「実行」だけじゃなくて、分析、設計、実装、実行を含むよ。あまり理解されていないけど</li>
+<li>新人に対してロールとキャリアプランをきちんと説明することで、動機づけに繋がるよ</li>
+<li>品質管理と開発は仲が悪くなりやすいけど、同じ目標をもって仲良くやりたいよね</li>
+<li>(テストにかぎらず)技術トラックにいくかマネジメントトラックにいくか考えるといいよ</li>
 </ul>
+<p>次はreactの勉強会に参加したい。</p>
 
     
 	</div>
@@ -247,11 +430,11 @@
 
 
   
-    <article id="post-art/2017-07-23-jackhamm1" class="post">
+    <article id="post-etc/20170731" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/07/23/art/2017-07-23-jackhamm1/" class="article-date">
-  <time datetime="2017-07-23T03:34:09.000Z" itemprop="datePublished">2017-07-23</time>
+			<a href="/2017/07/31/etc/20170731/" class="article-date">
+  <time datetime="2017-07-31T13:30:12.000Z" itemprop="datePublished">2017-07-31</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -264,16 +447,16 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/23/art/2017-07-23-jackhamm1/">jackhamm1</a>
+      <a class="article-title" href="/2017/07/31/etc/20170731/">20170731</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<p>人体のデッサン技法 Jack Hamm</p>
-<p>1頁目 顎がとんがってしまった。楽しんで書くように心がけた。</p>
-<p><img src="/img/jackhamm1.png" width="400px"></p>
+    	<p>自炊の本を借りた。1ページ目から。</p>
+<p><img src="/img/20170731/1.jpg" width="400px"></p>
+<p>余ったので明日の昼食に持っていく。</p>
 
     
 	</div>
@@ -281,59 +464,6 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackhamm/">jackhamm</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-etc/test" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/07/22/etc/test/" class="article-date">
-  <time datetime="2017-07-21T15:00:00.000Z" itemprop="datePublished">2017-07-22</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/07/22/etc/test/">無題</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>なにをしていいかわからないので、勉強することにした。</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/ph/">ph</a>
-  </div>
-
 			</span>
 			<span class="tags">
 				
@@ -349,11 +479,11 @@
 
 
   
-    <article id="post-etc/heroku" class="post">
+    <article id="post-art/20170730/20170730-dessin" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2016/04/21/etc/heroku/" class="article-date">
-  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
+			<a href="/2017/07/30/art/20170730/20170730-dessin/" class="article-date">
+  <time datetime="2017-07-30T11:12:45.000Z" itemprop="datePublished">2017-07-30</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -366,14 +496,21 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/04/21/etc/heroku/">heroku memo</a>
+      <a class="article-title" href="/2017/07/30/art/20170730/20170730-dessin/">20170730_dessin</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> heroku config:<span class="built_in">set</span> NPM_CONFIG_PRODUCTION=<span class="literal">false</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> heroku config:<span class="built_in">set</span> NODE_MODULES_CACHE=<span class="literal">false</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -am <span class="string">'disable node_modules cache'</span> --allow-empty</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push heroku master</span></div></pre></td></tr></table></figure>
+    	<p>デッサン教室に体験入学してきた。</p>
+<p>とりあえずフリーハンドで描いてと言われて書く。</p>
+<p><img src="/img/20170730/1.jpg" width="400px"></p>
+<p>今度は定規を使って形を作ってから陰影の説明を受けた。</p>
+<p><img src="/img/20170730/2.jpg" width="400px"></p>
+<p>最後に清書をした。</p>
+<p><img src="/img/20170730/3.jpg" width="400px"></p>
+<p>水曜日にまた行く。</p>
 
     
 	</div>
@@ -381,13 +518,11 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/nodejs-heroku/">nodejs, heroku</a>
-  </div>
-
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -400,11 +535,11 @@
 
 
   
-    <article id="post-dev/deployhexo" class="post">
+    <article id="post-etc/stop-quicksilver" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2016/04/21/dev/deployhexo/" class="article-date">
-  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
+			<a href="/2017/07/29/etc/stop-quicksilver/" class="article-date">
+  <time datetime="2017-07-29T07:39:45.000Z" itemprop="datePublished">2017-07-29</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -417,14 +552,17 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/04/21/dev/deployhexo/">Deply hexo</a>
+      <a class="article-title" href="/2017/07/29/etc/stop-quicksilver/">Quicksilverをやめた</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> clean</span></div><div class="line">$ npm <span class="keyword">run</span><span class="bash"> deploy</span></div></pre></td></tr></table></figure>
+    	<p>Macを使いはじめた頃から使っていたランチャ Quicksilver の使用をやめた。</p>
+<p>きっかけはQuicksilverが起動時に固まることが多かったからだが、OS標準のSpotlightも機能が充実してきているようなので、しばらくSpotlightをメインで試用してみる。</p>
+<p>Quicksilverはbrew caskでインストールしていたので、アンインストールもbrew cask で行った。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span>cask uninstall quicksilver</div></pre></td></tr></table></figure>
 
     
 	</div>
@@ -432,61 +570,6 @@
 		<div class="entry-meta-footer">
 			<span class="category">
 				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-etc/firstpost" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/02/11/etc/firstpost/" class="article-date">
-  <time datetime="2015-02-10T15:00:00.000Z" itemprop="datePublished">2015-02-11</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2015/02/11/etc/firstpost/">first post</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;&#125;</div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/c/">c++</a>
-  </div>
-
 			</span>
 			<span class="tags">
 				
@@ -504,7 +587,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 

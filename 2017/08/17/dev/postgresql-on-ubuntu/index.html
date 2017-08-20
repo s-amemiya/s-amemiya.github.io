@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>postgresql-on-ubuntu | Snow Shovel</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Ubuntu 16.04.2 組み込みposgresの設定postgresユーザは、パスワードがない1postgres=# ALTER USER postgres PASSWORD &apos;****&apos; psql: FATAL:  Peer authentication failed for user “postgres”の対応1234$ sudo vi /etc/postgresql/9.1/main/">
+<meta name="keywords" content="dev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postgresql-on-ubuntu">
+<meta property="og:url" content="http://blog.s-amemiya.com/2017/08/17/dev/postgresql-on-ubuntu/index.html">
+<meta property="og:site_name" content="Snow Shovel">
+<meta property="og:description" content="Ubuntu 16.04.2 組み込みposgresの設定postgresユーザは、パスワードがない1postgres=# ALTER USER postgres PASSWORD &apos;****&apos; psql: FATAL:  Peer authentication failed for user “postgres”の対応1234$ sudo vi /etc/postgresql/9.1/main/">
+<meta property="og:updated_time" content="2017-08-20T14:14:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="postgresql-on-ubuntu">
+<meta name="twitter:description" content="Ubuntu 16.04.2 組み込みposgresの設定postgresユーザは、パスワードがない1postgres=# ALTER USER postgres PASSWORD &apos;****&apos; psql: FATAL:  Peer authentication failed for user “postgres”の対応1234$ sudo vi /etc/postgresql/9.1/main/">
+  
+    <link rel="alternative" href="/atom.xml" title="Snow Shovel" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.s-amemiya.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-dev/postgresql-on-ubuntu" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/17/dev/postgresql-on-ubuntu/" class="article-date">
+  <time datetime="2017-08-16T23:39:24.000Z" itemprop="datePublished">2017-08-17</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      postgresql-on-ubuntu
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h4 id="Ubuntu-16-04-2-組み込みposgresの設定"><a href="#Ubuntu-16-04-2-組み込みposgresの設定" class="headerlink" title="Ubuntu 16.04.2 組み込みposgresの設定"></a>Ubuntu 16.04.2 組み込みposgresの設定</h4><h4 id="postgresユーザは、パスワードがない"><a href="#postgresユーザは、パスワードがない" class="headerlink" title="postgresユーザは、パスワードがない"></a>postgresユーザは、パスワードがない</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">postgres</span>=# ALTER USER postgres PASSWORD <span class="string">'****'</span></div></pre></td></tr></table></figure>
+<h4 id="psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応"><a href="#psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応" class="headerlink" title="psql: FATAL:  Peer authentication failed for user “postgres”の対応"></a>psql: FATAL:  Peer authentication failed for user “postgres”の対応</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo vi /etc/postgresql/9.1/main/pg_hba.conf</div><div class="line">local   all             postgres                               <span class="built_in"> peer</span></div><div class="line">↓</div><div class="line">local   all             postgres                                md5</div></pre></td></tr></table></figure>
+<h4 id="port-open"><a href="#port-open" class="headerlink" title="port open"></a>port open</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vi /etc/postgresql/8.2/main/postgresql.conf</span></div><div class="line"><span class="meta">#</span><span class="bash">listen_addresses = <span class="string">'localhost'</span></span></div><div class="line">↓</div><div class="line">listen_addresses = '*'</div><div class="line"><span class="meta">$</span><span class="bash"> sudo service postgresql restart</span></div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="external">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
+<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="external">Postgresql: password authentication failed for user “postgres”
+</a></p>
+<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="external">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/17/dev/sublime-style-column-selection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Atom Editor で矩形選択
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/17/dev/hello-sequelize/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Sequelizeを使う
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.s-amemiya.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 Shinya Amemiya<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

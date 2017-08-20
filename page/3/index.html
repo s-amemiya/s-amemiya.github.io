@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Snow Shovel</title>
+  <meta name="viewport" content="width=device-width">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Snow Shovel">
+<meta property="og:url" content="http://blog.s-amemiya.com/page/3/index.html">
+<meta property="og:site_name" content="Snow Shovel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Snow Shovel">
+  
+    <link rel="alternative" href="/atom.xml" title="Snow Shovel" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.s-amemiya.com"></form>
+	</div>
+</header>
+    <div id="main">
+      
+  
+    <article id="post-dev/postgres-on-macosx" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/29/dev/postgres-on-macosx/" class="article-date">
+  <time datetime="2017-07-29T07:34:12.000Z" itemprop="datePublished">2017-07-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/29/dev/postgres-on-macosx/">postgres-on-macosx</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>MacOSXに開発用の<code>postgresql</code>を構築したときのメモ。</p>
+<h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>postgresql</div></pre></td></tr></table></figure>
+<h4 id="サービスの起動とOS起動時の設定"><a href="#サービスの起動とOS起動時の設定" class="headerlink" title="サービスの起動とOS起動時の設定"></a>サービスの起動とOS起動時の設定</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pg_ctl -D /usr/<span class="built_in">local</span>/var/postgres start &amp;&amp; brew $ services start postgresql</span></div></pre></td></tr></table></figure>
+<h4 id="postgresロールがなかったのでつくる"><a href="#postgresロールがなかったのでつくる" class="headerlink" title="postgresロールがなかったのでつくる"></a>postgresロールがなかったのでつくる</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ /usr/local/Cellar/postgresql/9.6.3/bin/createuser -s postgres</div><div class="line">$ psql postgres</div><div class="line">postgres=# \du</div><div class="line"><span class="code">                                   List of roles</span></div><div class="line"><span class="section"> Role name |                         Attributes                         | Member of</span></div><div class="line">-----------+------------------------------------------------------------+-----------</div><div class="line"><span class="code"> postgres  | Superuser, Create role, Create DB                          | &#123;&#125;</span></div><div class="line"><span class="code"> shinya    | Superuser, Create role, Create DB, Replication, Bypass RLS | &#123;&#125;</span></div></pre></td></tr></table></figure>
+<h4 id="DB作成"><a href="#DB作成" class="headerlink" title="DB作成"></a>DB作成</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>postgresql<span class="regexp">/9.6.3/</span>bin<span class="regexp">/createdb rslite -U postgres</span></div></pre></td></tr></table></figure>
+<h4 id="参考ページ"><a href="#参考ページ" class="headerlink" title="参考ページ"></a>参考ページ</h4><p><a href="https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx" target="_blank" rel="external">Getting Started with PostgreSQL on Mac OSX</a></p>
+<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist" target="_blank" rel="external">psql: FATAL: role “postgres” does not exist
+</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/create-react-app" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/27/dev/create-react-app/" class="article-date">
+  <time datetime="2017-07-26T15:22:13.000Z" itemprop="datePublished">2017-07-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/27/dev/create-react-app/">react テンプレート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="external">https://github.com/facebookincubator/create-react-app</a></p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></div><div class="line"></div><div class="line"><span class="built_in">create-react-app</span> <span class="string">my-app</span></div><div class="line"><span class="string">cd </span><span class="string">my-app/</span></div><div class="line"><span class="string">npm </span><span class="string">start</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-dev/">react, dev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-books/narnia1" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/25/books/narnia1/" class="article-date">
+  <time datetime="2017-07-25T13:21:57.000Z" itemprop="datePublished">2017-07-25</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/25/books/narnia1/">魔術師のおい ナルニア国物語 1 (古典新訳文庫) 感想</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>子供の頃父からナルニア国物語を薦められた。当時は読まなかった。<br>薦められて読んだのはゲド戦記だけだった。</p>
+<p>ディゴリーはりんごを食べてしまうかと思った。</p>
+<p>あとがきを読むと、光文社新書のナルニア国物語は刊行順ではなく、物語の時系列順とのこと。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/books/">books</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-art/2017-07-24-dessin" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/24/art/2017-07-24-dessin/" class="article-date">
+  <time datetime="2017-07-24T12:58:31.000Z" itemprop="datePublished">2017-07-24</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/24/art/2017-07-24-dessin/">0724_art</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h3 id="人体のデッサン技法-Jack-Hamm-3頁目"><a href="#人体のデッサン技法-Jack-Hamm-3頁目" class="headerlink" title="人体のデッサン技法 Jack Hamm 3頁目"></a>人体のデッサン技法 Jack Hamm 3頁目</h3><p><img src="/img/07242017212814.jpg" width="400px"></p>
+<h3 id="「絵はすぐに上手くならない」-手のデッサン"><a href="#「絵はすぐに上手くならない」-手のデッサン" class="headerlink" title="「絵はすぐに上手くならない」 手のデッサン"></a>「絵はすぐに上手くならない」 手のデッサン</h3><p><img src="/img/07242017212814_001.jpg" width="400px"><br><img src="/img/07242017212814_002.jpg" width="400px"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackhamm/">jackhamm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-etc/0723_about" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/23/etc/0723_about/" class="article-date">
+  <time datetime="2017-07-23T03:53:16.000Z" itemprop="datePublished">2017-07-23</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/23/etc/0723_about/">about</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>ここでは次のものを出力する</p>
+<ul>
+<li>開発関連で調べたもの</li>
+<li>読んだ本</li>
+<li>描いたもの</li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-art/2017-07-23-jackhamm1" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/23/art/2017-07-23-jackhamm1/" class="article-date">
+  <time datetime="2017-07-23T03:34:09.000Z" itemprop="datePublished">2017-07-23</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/23/art/2017-07-23-jackhamm1/">jackhamm1</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>人体のデッサン技法 Jack Hamm</p>
+<p>1頁目 顎がとんがってしまった。楽しんで書くように心がけた。</p>
+<p><img src="/img/jackhamm1.png" width="400px"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackhamm/">jackhamm</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-etc/test" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/22/etc/test/" class="article-date">
+  <time datetime="2017-07-21T15:00:00.000Z" itemprop="datePublished">2017-07-22</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/22/etc/test/">無題</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>なにをしていいかわからないので、勉強することにした。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ph/">ph</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-etc/heroku" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/21/etc/heroku/" class="article-date">
+  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/21/etc/heroku/">heroku memo</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> heroku config:<span class="built_in">set</span> NPM_CONFIG_PRODUCTION=<span class="literal">false</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> heroku config:<span class="built_in">set</span> NODE_MODULES_CACHE=<span class="literal">false</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -am <span class="string">'disable node_modules cache'</span> --allow-empty</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push heroku master</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/nodejs-heroku/">nodejs, heroku</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/deployhexo" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/21/dev/deployhexo/" class="article-date">
+  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/21/dev/deployhexo/">Deply hexo</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> clean</span></div><div class="line">$ npm <span class="keyword">run</span><span class="bash"> deploy</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-etc/firstpost" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2015/02/11/etc/firstpost/" class="article-date">
+  <time datetime="2015-02-10T15:00:00.000Z" itemprop="datePublished">2015-02-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2015/02/11/etc/firstpost/">first post</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;&#125;</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c/">c++</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+  
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.s-amemiya.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2017 Shinya Amemiya<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
