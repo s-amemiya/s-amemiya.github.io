@@ -44,6 +44,58 @@
     <div id="main">
       
   
+    <article id="post-art/dessin6" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/26/art/dessin6/" class="article-date">
+  <time datetime="2017-08-26T12:44:18.000Z" itemprop="datePublished">2017-08-26</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/26/art/dessin6/">dessin6</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は山村先生。2回目になる。横倒しの円柱の簡単な手直しだけしてすぐに画用紙へはいった。30円あってよかった</p>
+<h2 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h2><ul>
+<li>影も早い段階で描いちゃっていいかも</li>
+<li>奥の丸みの部分を、手前の丸みお見ながら違和感ないように</li>
+</ul>
+<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>月の変わり目なので9/3以降で改めて予約する</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-art/dessin5" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -487,64 +539,9 @@
 
 
   
-    <article id="post-dev/postgresql-on-ubuntu" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/postgresql-on-ubuntu/" class="article-date">
-  <time datetime="2017-08-16T23:39:24.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/postgresql-on-ubuntu/">postgresql-on-ubuntu</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<h4 id="Ubuntu-16-04-2-組み込みposgresの設定"><a href="#Ubuntu-16-04-2-組み込みposgresの設定" class="headerlink" title="Ubuntu 16.04.2 組み込みposgresの設定"></a>Ubuntu 16.04.2 組み込みposgresの設定</h4><h4 id="postgresユーザは、パスワードがない"><a href="#postgresユーザは、パスワードがない" class="headerlink" title="postgresユーザは、パスワードがない"></a>postgresユーザは、パスワードがない</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">postgres</span>=# ALTER USER postgres PASSWORD <span class="string">'****'</span></div></pre></td></tr></table></figure>
-<h4 id="psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応"><a href="#psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応" class="headerlink" title="psql: FATAL:  Peer authentication failed for user “postgres”の対応"></a>psql: FATAL:  Peer authentication failed for user “postgres”の対応</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo vi /etc/postgresql/9.1/main/pg_hba.conf</div><div class="line">local   all             postgres                               <span class="built_in"> peer</span></div><div class="line">↓</div><div class="line">local   all             postgres                                md5</div></pre></td></tr></table></figure>
-<h4 id="port-open"><a href="#port-open" class="headerlink" title="port open"></a>port open</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vi /etc/postgresql/8.2/main/postgresql.conf</span></div><div class="line"><span class="meta">#</span><span class="bash">listen_addresses = <span class="string">'localhost'</span></span></div><div class="line">↓</div><div class="line">listen_addresses = '*'</div><div class="line"><span class="meta">$</span><span class="bash"> sudo service postgresql restart</span></div></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="external">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
-<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="external">Postgresql: password authentication failed for user “postgres”
-</a></p>
-<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="external">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
