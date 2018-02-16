@@ -44,11 +44,11 @@
     <div id="main">
       
   
-    <article id="post-art/sep/dessin1" class="post">
+    <article id="post-dev/chrome-on-ubuntu" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/09/15/art/sep/dessin1/" class="article-date">
-  <time datetime="2017-09-15T03:59:19.000Z" itemprop="datePublished">2017-09-15</time>
+			<a href="/2017/11/21/dev/chrome-on-ubuntu/" class="article-date">
+  <time datetime="2017-11-21T01:42:35.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -61,18 +61,15 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/09/15/art/sep/dessin1/">9/10 デッサン1</a>
+      <a class="article-title" href="/2017/11/21/dev/chrome-on-ubuntu/">UbuntuにChromeをインストール</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は安藤校長と西脇先生。画用紙に入っていた横倒しの円柱の続き。</p>
-<h2 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h2><ul>
-<li>グラデーションを滑らかに</li>
-<li>上面の光が当たってる箇所と、下面の反射で明るい部分は、明るさは同じでもタッチを変えること</li>
-</ul>
+    	<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sudo sh -c <span class="string">'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" &gt;&gt; /etc/apt/sources.list.d/google.list'</span></span></div><div class="line"><span class="meta">$</span><span class="bash"> sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span></div><div class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></div><div class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install google-chrome-stable</span></div></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.karelie.net/how-to-install-google-chrome-on-ubuntu/" target="_blank" rel="noopener">UbuntuにGoogle Chromeを簡単にインストールする方法</a></p>
 
     
 	</div>
@@ -83,7 +80,7 @@
 			</span>
 			<span class="tags">
 				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu-chrome/">ubuntu, chrome</a></li></ul>
 
 			</span>
 		</div>
@@ -97,11 +94,11 @@
 
 
   
-    <article id="post-art/aug/dessin6" class="post">
+    <article id="post-dev/use-vue-material" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/08/26/art/aug/dessin6/" class="article-date">
-  <time datetime="2017-08-26T12:44:18.000Z" itemprop="datePublished">2017-08-26</time>
+			<a href="/2017/09/21/dev/use-vue-material/" class="article-date">
+  <time datetime="2017-09-21T07:36:14.000Z" itemprop="datePublished">2017-09-21</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -114,19 +111,16 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/26/art/aug/dessin6/">8/25 デッサン</a>
+      <a class="article-title" href="/2017/09/21/dev/use-vue-material/">Vue.jsでマテリアルデザインを使う</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は山村先生。2回目になる。横倒しの円柱の簡単な手直しだけしてすぐに画用紙へはいった。30円あってよかった</p>
-<h2 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h2><ul>
-<li>影も早い段階で描いちゃっていいかも</li>
-<li>奥の丸みの部分を、手前の丸みお見ながら違和感ないように</li>
-</ul>
-<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>月の変わり目なので9/3以降で改めて予約する</p>
+    	<p><a href="http://vuematerial.io" target="_blank" rel="noopener">Vue Material</a></p>
+<h2 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yarn <span class="keyword">add</span><span class="bash"> -D vue-material</span></div></pre></td></tr></table></figure>
+<h2 id="使用準備"><a href="#使用準備" class="headerlink" title="使用準備"></a>使用準備</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> VueMaterial <span class="keyword">from</span> <span class="string">'vue-material'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'vue-material/dist/vue-material.css'</span></div><div class="line"></div><div class="line">Vue.use(VueMaterial)</div></pre></td></tr></table></figure>
 
     
 	</div>
@@ -137,6 +131,8 @@
 			</span>
 			<span class="tags">
 				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuejs/">vuejs</a></li></ul>
+
 			</span>
 		</div>
 	</footer>
@@ -149,11 +145,11 @@
 
 
   
-    <article id="post-art/aug/dessin5" class="post">
+    <article id="post-dev/vue-init" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
-			<a href="/2017/08/20/art/aug/dessin5/" class="article-date">
-  <time datetime="2017-08-20T14:23:23.000Z" itemprop="datePublished">2017-08-20</time>
+			<a href="/2017/09/21/dev/vue-init/" class="article-date">
+  <time datetime="2017-09-21T07:27:54.000Z" itemprop="datePublished">2017-09-21</time>
 </a>
 		</span>
 		<span class="meta-elements author">Shinya Amemiya</span>
@@ -166,21 +162,15 @@
 		
   
     <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/20/art/aug/dessin5/">8/20 デッサン</a>
+      <a class="article-title" href="/2017/09/21/dev/vue-init/">Vue.jsテンプレート</a>
     </h1>
   
 
 	</header>
 	<div class="entry-content">
 		
-    	<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は西脇先生。横倒しにした円柱の続き、手直ししてから本番に行く予定だったが、今日いっぱい手直しに使った。</p>
-<h2 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h2><ul>
-<li>グラデーションの、横のラインがある程度同じ濃さになるように</li>
-<li>キワの部分は、えんぴつを立てて決める</li>
-<li>下に出来る影を濃く</li>
-<li>側面が１番暗くなるので、もっと黒を重ねていい。3B, 4Bも検討</li>
-</ul>
-<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>水曜日夜、手直ししてから本番</p>
+    	<h2 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install -g vue-cli</span></div></pre></td></tr></table></figure>
+<h4 id="使う"><a href="#使う" class="headerlink" title="使う"></a>使う</h4><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vue init &lt;template-<span class="built_in">name</span>&gt; &lt;project-<span class="built_in">name</span>&gt;</div></pre></td></tr></table></figure>
 
     
 	</div>
@@ -191,58 +181,8 @@
 			</span>
 			<span class="tags">
 				
-			</span>
-		</div>
-	</footer>
-	
-</article>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuejs/">vuejs</a></li></ul>
 
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-art/aug/dessin4" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/20/art/aug/dessin4/" class="article-date">
-  <time datetime="2017-08-20T14:17:05.000Z" itemprop="datePublished">2017-08-20</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/20/art/aug/dessin4/">8/17 デッサン</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は野中先生。横倒しにした円柱について丁寧に説明していただいた。</p>
-<h2 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h2><ul>
-<li>パースのため、円柱は遠くに行くほど先細る</li>
-<li>手前の円より奥の円の方が単辺が長い</li>
-</ul>
-<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>日曜日、10:30から。画用紙に移る予定</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
 			</span>
 		</div>
 	</footer>
@@ -328,7 +268,7 @@
 		
     	<p><code>--env</code> を使う<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sequelize db:migrate --env production</span></div></pre></td></tr></table></figure></p>
 <p>規定値は <code>development</code></p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://docs.sequelizejs.com/manual/tutorial/migrations.html" target="_blank" rel="external">Sequelize/Manual/Tutorial/Migrattions</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://docs.sequelizejs.com/manual/tutorial/migrations.html" target="_blank" rel="noopener">Sequelize/Manual/Tutorial/Migrattions</a></p>
 
     
 	</div>
@@ -519,7 +459,7 @@
     	<h4 id="設定ファイルを開く"><a href="#設定ファイルを開く" class="headerlink" title="設定ファイルを開く"></a>設定ファイルを開く</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> vi /etc/network/interfaces</span></div></pre></td></tr></table></figure>
 <h4 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The primary network interface</span></div><div class="line">auto eth0</div><div class="line">iface eth0 inet static</div><div class="line">   <span class="built_in"> address </span>10.0.0.41</div><div class="line">    netmask 255.255.255.0</div><div class="line">    gateway 10.0.0.1</div></pre></td></tr></table></figure>
 <h4 id="サービスの再起動"><a href="#サービスの再起動" class="headerlink" title="サービスの再起動"></a>サービスの再起動</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo<span class="built_in"> service </span>networking restart</div></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.swiftstack.com/docs/install/configure_networking.html" target="_blank" rel="external">Configure Networking on Ubuntu</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.swiftstack.com/docs/install/configure_networking.html" target="_blank" rel="noopener">Configure Networking on Ubuntu</a></p>
 
     
 	</div>
@@ -542,9 +482,59 @@
 
 
   
+    <article id="post-dev/sublime-style-column-selection" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/17/dev/sublime-style-column-selection/" class="article-date">
+  <time datetime="2017-08-16T23:42:23.000Z" itemprop="datePublished">2017-08-17</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/17/dev/sublime-style-column-selection/">Atom Editor で矩形選択</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Atom Editor で矩形選択</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm <span class="keyword">install</span> sublime-<span class="keyword">style</span>-<span class="keyword">column</span>-selection</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -560,7 +550,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>

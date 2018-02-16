@@ -76,8 +76,8 @@
 <h4 id="サービスの起動とOS起動時の設定"><a href="#サービスの起動とOS起動時の設定" class="headerlink" title="サービスの起動とOS起動時の設定"></a>サービスの起動とOS起動時の設定</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pg_ctl -D /usr/<span class="built_in">local</span>/var/postgres start &amp;&amp; brew $ services start postgresql</span></div></pre></td></tr></table></figure>
 <h4 id="postgresロールがなかったのでつくる"><a href="#postgresロールがなかったのでつくる" class="headerlink" title="postgresロールがなかったのでつくる"></a>postgresロールがなかったのでつくる</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ /usr/local/Cellar/postgresql/9.6.3/bin/createuser -s postgres</div><div class="line">$ psql postgres</div><div class="line">postgres=# \du</div><div class="line"><span class="code">                                   List of roles</span></div><div class="line"><span class="section"> Role name |                         Attributes                         | Member of</span></div><div class="line">-----------+------------------------------------------------------------+-----------</div><div class="line"><span class="code"> postgres  | Superuser, Create role, Create DB                          | &#123;&#125;</span></div><div class="line"><span class="code"> shinya    | Superuser, Create role, Create DB, Replication, Bypass RLS | &#123;&#125;</span></div></pre></td></tr></table></figure>
 <h4 id="DB作成"><a href="#DB作成" class="headerlink" title="DB作成"></a>DB作成</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>postgresql<span class="regexp">/9.6.3/</span>bin<span class="regexp">/createdb rslite -U postgres</span></div></pre></td></tr></table></figure>
-<h4 id="参考ページ"><a href="#参考ページ" class="headerlink" title="参考ページ"></a>参考ページ</h4><p><a href="https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx" target="_blank" rel="external">Getting Started with PostgreSQL on Mac OSX</a></p>
-<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist" target="_blank" rel="external">psql: FATAL: role “postgres” does not exist
+<h4 id="参考ページ"><a href="#参考ページ" class="headerlink" title="参考ページ"></a>参考ページ</h4><p><a href="https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx" target="_blank" rel="noopener">Getting Started with PostgreSQL on Mac OSX</a></p>
+<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist" target="_blank" rel="noopener">psql: FATAL: role “postgres” does not exist
 </a></p>
 
     
@@ -137,7 +137,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>

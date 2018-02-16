@@ -44,56 +44,6 @@
     <div id="main">
       
   
-    <article id="post-dev/sublime-style-column-selection" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/sublime-style-column-selection/" class="article-date">
-  <time datetime="2017-08-16T23:42:23.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/sublime-style-column-selection/">Atom Editor で矩形選択</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>Atom Editor で矩形選択</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm <span class="keyword">install</span> sublime-<span class="keyword">style</span>-<span class="keyword">column</span>-selection</div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-dev/postgresql-on-ubuntu" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -121,10 +71,10 @@
     	<h4 id="Ubuntu-16-04-2-組み込みposgresの設定"><a href="#Ubuntu-16-04-2-組み込みposgresの設定" class="headerlink" title="Ubuntu 16.04.2 組み込みposgresの設定"></a>Ubuntu 16.04.2 組み込みposgresの設定</h4><h4 id="postgresユーザは、パスワードがない"><a href="#postgresユーザは、パスワードがない" class="headerlink" title="postgresユーザは、パスワードがない"></a>postgresユーザは、パスワードがない</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">postgres</span>=# ALTER USER postgres PASSWORD <span class="string">'****'</span></div></pre></td></tr></table></figure>
 <h4 id="psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応"><a href="#psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応" class="headerlink" title="psql: FATAL:  Peer authentication failed for user “postgres”の対応"></a>psql: FATAL:  Peer authentication failed for user “postgres”の対応</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo vi /etc/postgresql/9.1/main/pg_hba.conf</div><div class="line">local   all             postgres                               <span class="built_in"> peer</span></div><div class="line">↓</div><div class="line">local   all             postgres                                md5</div></pre></td></tr></table></figure>
 <h4 id="port-open"><a href="#port-open" class="headerlink" title="port open"></a>port open</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vi /etc/postgresql/8.2/main/postgresql.conf</span></div><div class="line"><span class="meta">#</span><span class="bash">listen_addresses = <span class="string">'localhost'</span></span></div><div class="line">↓</div><div class="line">listen_addresses = '*'</div><div class="line"><span class="meta">$</span><span class="bash"> sudo service postgresql restart</span></div></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="external">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
-<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="external">Postgresql: password authentication failed for user “postgres”
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="noopener">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
+<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="noopener">Postgresql: password authentication failed for user “postgres”
 </a></p>
-<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="external">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
+<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="noopener">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
 
     
 	</div>
@@ -173,7 +123,7 @@
 	</header>
 	<div class="entry-content">
 		
-    	<h2 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a><a href="http://docs.sequelizejs.com" target="_blank" rel="external">Sequelize</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> yarn add -D sequelize sequelize-cli</span></div><div class="line"><span class="meta">$</span><span class="bash"> sequelize init</span></div></pre></td></tr></table></figure>
+    	<h2 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a><a href="http://docs.sequelizejs.com" target="_blank" rel="noopener">Sequelize</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> yarn add -D sequelize sequelize-cli</span></div><div class="line"><span class="meta">$</span><span class="bash"> sequelize init</span></div></pre></td></tr></table></figure>
 <h4 id="config-config-json-を修正する"><a href="#config-config-json-を修正する" class="headerlink" title="./config/config.json を修正する"></a><code>./config/config.json</code> を修正する</h4><h4 id="モデル作成"><a href="#モデル作成" class="headerlink" title="モデル作成"></a>モデル作成</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sequelize model:create --name <span class="keyword">order</span> <span class="title">--underscored</span> --<span class="keyword">attributes</span> user_id:<span class="keyword">string</span>,price:<span class="keyword">string</span></div></pre></td></tr></table></figure>
 <h4 id="DBに適用"><a href="#DBに適用" class="headerlink" title="DBに適用"></a>DBに適用</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sequelize db:migrate</span></div></pre></td></tr></table></figure>
 
@@ -243,62 +193,6 @@
 			</span>
 			<span class="tags">
 				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-art/aug/dessin3" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/14/art/aug/dessin3/" class="article-date">
-  <time datetime="2017-08-14T06:50:18.000Z" itemprop="datePublished">2017-08-14</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/14/art/aug/dessin3/">8/14 デッサン3</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>デッサン教室 8月第三回に行ってきた</p>
-<h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><p>夏休みを利用して、午前中にデッサン教室に行った。</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>講師は田丸先生。体験レッスンの時に受付とコース説明してくれた方だ。内容は前回に引き続き画用紙への円柱本番続き。開始時に輪郭の甘さと、左後ろに伸びる影をもう少し書くように指摘をもらった。2時間やって、最後に影が残ったとので時間持ち越しにした。</p>
-<h4 id="指摘事項"><a href="#指摘事項" class="headerlink" title="指摘事項"></a>指摘事項</h4><ul>
-<li>グラデーションのムラに気をつける</li>
-<li>縁取りが甘い、回り込むように、遠くの淵は薄く</li>
-</ul>
-<h2 id="次回"><a href="#次回" class="headerlink" title="次回"></a>次回</h2><p>木曜の20時からにした</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
-
 			</span>
 		</div>
 	</footer>
@@ -479,59 +373,6 @@
 
 
   
-    <article id="post-art/aug/dessin1" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/05/art/aug/dessin1/" class="article-date">
-  <time datetime="2017-08-05T00:53:40.000Z" itemprop="datePublished">2017-08-05</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/05/art/aug/dessin1/">8/2 デッサン教室初日</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>デッサン教室 初日</p>
-<p>鉛筆の削り方を教わる。芯を1cm弱、木削るのは芯の倍くらい。</p>
-<p>円錐のテスト</p>
-<p><img src="/img/20170802/1.jpg" width="400px"></p>
-<p>楕円の練習として４つ描いたけど途中なので持ち帰ってない</p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dessin/">dessin</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-dev/20170801" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -557,7 +398,7 @@
 	<div class="entry-content">
 		
     	<p>株式会社アカツキさん主催の「ソフトウェア品質勉強会」に会社の後輩と参加してきた。</p>
-<p><a href="https://connpass.com/event/61826/" target="_blank" rel="external">https://connpass.com/event/61826/</a></p>
+<p><a href="https://connpass.com/event/61826/" target="_blank" rel="noopener">https://connpass.com/event/61826/</a></p>
 <p>最近IT勉強会に参加できいなかったのと、品質管理について知識を深めたかったからだ。</p>
 <p>アカツキさんはゲーム開発がメインの会社ということだった。おしゃれオフィスと、ホワイトボードにたくさん付箋の貼ってある光景が目を引いた。</p>
 <p>印象に残った内容はこのあたり。</p>
@@ -590,9 +431,165 @@
 
 
   
+    <article id="post-etc/stop-quicksilver" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/29/etc/stop-quicksilver/" class="article-date">
+  <time datetime="2017-07-29T07:39:45.000Z" itemprop="datePublished">2017-07-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/29/etc/stop-quicksilver/">Quicksilverをやめた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Macを使いはじめた頃から使っていたランチャ Quicksilver の使用をやめた。</p>
+<p>きっかけはQuicksilverが起動時に固まることが多かったからだが、OS標準のSpotlightも機能が充実してきているようなので、しばらくSpotlightをメインで試用してみる。</p>
+<p>Quicksilverはbrew caskでインストールしていたので、アンインストールもbrew cask で行った。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span>cask uninstall quicksilver</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/postgres-on-macosx" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/29/dev/postgres-on-macosx/" class="article-date">
+  <time datetime="2017-07-29T07:34:12.000Z" itemprop="datePublished">2017-07-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/29/dev/postgres-on-macosx/">postgres-on-macosx</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>MacOSXに開発用の<code>postgresql</code>を構築したときのメモ。</p>
+<h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>postgresql</div></pre></td></tr></table></figure>
+<h4 id="サービスの起動とOS起動時の設定"><a href="#サービスの起動とOS起動時の設定" class="headerlink" title="サービスの起動とOS起動時の設定"></a>サービスの起動とOS起動時の設定</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pg_ctl -D /usr/<span class="built_in">local</span>/var/postgres start &amp;&amp; brew $ services start postgresql</span></div></pre></td></tr></table></figure>
+<h4 id="postgresロールがなかったのでつくる"><a href="#postgresロールがなかったのでつくる" class="headerlink" title="postgresロールがなかったのでつくる"></a>postgresロールがなかったのでつくる</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ /usr/local/Cellar/postgresql/9.6.3/bin/createuser -s postgres</div><div class="line">$ psql postgres</div><div class="line">postgres=# \du</div><div class="line"><span class="code">                                   List of roles</span></div><div class="line"><span class="section"> Role name |                         Attributes                         | Member of</span></div><div class="line">-----------+------------------------------------------------------------+-----------</div><div class="line"><span class="code"> postgres  | Superuser, Create role, Create DB                          | &#123;&#125;</span></div><div class="line"><span class="code"> shinya    | Superuser, Create role, Create DB, Replication, Bypass RLS | &#123;&#125;</span></div></pre></td></tr></table></figure>
+<h4 id="DB作成"><a href="#DB作成" class="headerlink" title="DB作成"></a>DB作成</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>postgresql<span class="regexp">/9.6.3/</span>bin<span class="regexp">/createdb rslite -U postgres</span></div></pre></td></tr></table></figure>
+<h4 id="参考ページ"><a href="#参考ページ" class="headerlink" title="参考ページ"></a>参考ページ</h4><p><a href="https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx" target="_blank" rel="noopener">Getting Started with PostgreSQL on Mac OSX</a></p>
+<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist" target="_blank" rel="noopener">psql: FATAL: role “postgres” does not exist
+</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/create-react-app" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/27/dev/create-react-app/" class="article-date">
+  <time datetime="2017-07-26T15:22:13.000Z" itemprop="datePublished">2017-07-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/27/dev/create-react-app/">react テンプレート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a></p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></div><div class="line"></div><div class="line"><span class="built_in">create-react-app</span> <span class="string">my-app</span></div><div class="line"><span class="string">cd </span><span class="string">my-app/</span></div><div class="line"><span class="string">npm </span><span class="string">start</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-dev/">react, dev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -608,7 +605,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>

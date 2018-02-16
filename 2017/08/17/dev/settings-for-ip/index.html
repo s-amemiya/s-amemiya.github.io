@@ -73,7 +73,7 @@
     	<h4 id="設定ファイルを開く"><a href="#設定ファイルを開く" class="headerlink" title="設定ファイルを開く"></a>設定ファイルを開く</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> vi /etc/network/interfaces</span></div></pre></td></tr></table></figure>
 <h4 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The primary network interface</span></div><div class="line">auto eth0</div><div class="line">iface eth0 inet static</div><div class="line">   <span class="built_in"> address </span>10.0.0.41</div><div class="line">    netmask 255.255.255.0</div><div class="line">    gateway 10.0.0.1</div></pre></td></tr></table></figure>
 <h4 id="サービスの再起動"><a href="#サービスの再起動" class="headerlink" title="サービスの再起動"></a>サービスの再起動</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo<span class="built_in"> service </span>networking restart</div></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.swiftstack.com/docs/install/configure_networking.html" target="_blank" rel="external">Configure Networking on Ubuntu</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.swiftstack.com/docs/install/configure_networking.html" target="_blank" rel="noopener">Configure Networking on Ubuntu</a></p>
 
     
 	</div>
@@ -130,7 +130,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>

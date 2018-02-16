@@ -71,7 +71,7 @@
 	</header>
 	<div class="entry-content">
 		
-    	<h2 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a><a href="http://docs.sequelizejs.com" target="_blank" rel="external">Sequelize</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> yarn add -D sequelize sequelize-cli</span></div><div class="line"><span class="meta">$</span><span class="bash"> sequelize init</span></div></pre></td></tr></table></figure>
+    	<h2 id="Sequelize"><a href="#Sequelize" class="headerlink" title="Sequelize"></a><a href="http://docs.sequelizejs.com" target="_blank" rel="noopener">Sequelize</a></h2><h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> yarn add -D sequelize sequelize-cli</span></div><div class="line"><span class="meta">$</span><span class="bash"> sequelize init</span></div></pre></td></tr></table></figure>
 <h4 id="config-config-json-を修正する"><a href="#config-config-json-を修正する" class="headerlink" title="./config/config.json を修正する"></a><code>./config/config.json</code> を修正する</h4><h4 id="モデル作成"><a href="#モデル作成" class="headerlink" title="モデル作成"></a>モデル作成</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sequelize model:create --name <span class="keyword">order</span> <span class="title">--underscored</span> --<span class="keyword">attributes</span> user_id:<span class="keyword">string</span>,price:<span class="keyword">string</span></div></pre></td></tr></table></figure>
 <h4 id="DBに適用"><a href="#DBに適用" class="headerlink" title="DBに適用"></a>DBに適用</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sequelize db:migrate</span></div></pre></td></tr></table></figure>
 
@@ -132,7 +132,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>

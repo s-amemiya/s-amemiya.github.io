@@ -74,10 +74,10 @@
     	<h4 id="Ubuntu-16-04-2-組み込みposgresの設定"><a href="#Ubuntu-16-04-2-組み込みposgresの設定" class="headerlink" title="Ubuntu 16.04.2 組み込みposgresの設定"></a>Ubuntu 16.04.2 組み込みposgresの設定</h4><h4 id="postgresユーザは、パスワードがない"><a href="#postgresユーザは、パスワードがない" class="headerlink" title="postgresユーザは、パスワードがない"></a>postgresユーザは、パスワードがない</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">postgres</span>=# ALTER USER postgres PASSWORD <span class="string">'****'</span></div></pre></td></tr></table></figure>
 <h4 id="psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応"><a href="#psql-FATAL-Peer-authentication-failed-for-user-“postgres”の対応" class="headerlink" title="psql: FATAL:  Peer authentication failed for user “postgres”の対応"></a>psql: FATAL:  Peer authentication failed for user “postgres”の対応</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo vi /etc/postgresql/9.1/main/pg_hba.conf</div><div class="line">local   all             postgres                               <span class="built_in"> peer</span></div><div class="line">↓</div><div class="line">local   all             postgres                                md5</div></pre></td></tr></table></figure>
 <h4 id="port-open"><a href="#port-open" class="headerlink" title="port open"></a>port open</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> vi /etc/postgresql/8.2/main/postgresql.conf</span></div><div class="line"><span class="meta">#</span><span class="bash">listen_addresses = <span class="string">'localhost'</span></span></div><div class="line">↓</div><div class="line">listen_addresses = '*'</div><div class="line"><span class="meta">$</span><span class="bash"> sudo service postgresql restart</span></div></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="external">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
-<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="external">Postgresql: password authentication failed for user “postgres”
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04" target="_blank" rel="noopener">How To Install and Use PostgreSQL on Ubuntu 16.04</a></p>
+<p><a href="https://stackoverflow.com/questions/7695962/postgresql-password-authentication-failed-for-user-postgres" target="_blank" rel="noopener">Postgresql: password authentication failed for user “postgres”
 </a></p>
-<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="external">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
+<p><a href="https://stackoverflow.com/questions/18664074/getting-error-peer-authentication-failed-for-user-postgres-when-trying-to-ge" target="_blank" rel="noopener">Getting error: Peer authentication failed for user “postgres”, when trying to get pgsql working with rails</a></p>
 
     
 	</div>
@@ -136,7 +136,7 @@
 		<a href="/">Snow Shovel</a>
 	</h1>
 	<span class="copyright">
-		&copy; 2017 Shinya Amemiya<br>
+		&copy; 2018 Shinya Amemiya<br>
 		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
 		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	</span>
