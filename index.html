@@ -44,6 +44,204 @@
     <div id="main">
       
   
+    <article id="post-dev/2018/materialize" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/05/12/dev/2018/materialize/" class="article-date">
+  <time datetime="2018-05-12T04:49:58.000Z" itemprop="datePublished">2018-05-12</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/05/12/dev/2018/materialize/">Setup materializecss on js</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Materialize’s css and js can be used even if written in js file.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="string">'../node_modules/materialize-css/dist/css/materialize.min.css'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'../node_modules/materialize-css/dist/js/materialize.min.js'</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/2018/linear-search-js" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/05/09/dev/2018/linear-search-js/" class="article-date">
+  <time datetime="2018-05-08T15:00:00.000Z" itemprop="datePublished">2018-05-09</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/05/09/dev/2018/linear-search-js/">Linear search with JavaScript</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<script src="https://gist.github.com/s-amemiya/60c49981ed17327dda873b8cf54a8097.js"></script>
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/2018/use-vuex" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/11/dev/2018/use-vuex/" class="article-date">
+  <time datetime="2018-04-10T15:00:00.000Z" itemprop="datePublished">2018-04-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/04/11/dev/2018/use-vuex/">Preparation for using Vuex</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="Add-vuex"><a href="#Add-vuex" class="headerlink" title="Add vuex"></a>Add vuex</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add -D vuex</div></pre></td></tr></table></figure>
+<h1 id="Make-store-index-js"><a href="#Make-store-index-js" class="headerlink" title="Make ./store/index.js"></a>Make ./store/index.js</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./store/index.js</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line">Vue.use(Vuex)</div><div class="line"></div><div class="line"><span class="keyword">const</span> state = &#123;&#125;</div><div class="line"><span class="keyword">const</span> getters = &#123;&#125;</div><div class="line"><span class="keyword">const</span> actions = &#123;&#125;</div><div class="line"><span class="keyword">const</span> mutations = &#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  state,</div><div class="line">  getters,</div><div class="line">  actions,</div><div class="line">  mutations</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h1 id="Modify-main-js"><a href="#Modify-main-js" class="headerlink" title="Modify ./main.js"></a>Modify ./main.js</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./main.js</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span> <span class="comment">// added</span></div><div class="line"></div><div class="line">Vue.config.productionTip = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">/* eslint-disable no-new */</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store, <span class="comment">// added</span></div><div class="line">  components: &#123; App &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;App/&gt;'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuejs/">vuejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/2018/disable-js-validation" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/03/15/dev/2018/disable-js-validation/" class="article-date">
+  <time datetime="2018-03-14T15:00:00.000Z" itemprop="datePublished">2018-03-15</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2018/03/15/dev/2018/disable-js-validation/">If flowtype is used, VSCode outs &#39;types&#39; can only be used in a .ts file.</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"flow.useNPMPackagedFlow": true,</div><div class="line">"javascript.validate.enable": false,</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vscode/">vscode</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-dev/chrome-on-ubuntu" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -326,200 +524,6 @@
 			</span>
 			<span class="tags">
 				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-dev/check-port-from-client" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/check-port-from-client/" class="article-date">
-  <time datetime="2017-08-17T06:23:53.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/check-port-from-client/">クライアントからサーバへのポート確認</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ nc -zv <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">80</span></div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-dev/settings-for-ssh" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/settings-for-ssh/" class="article-date">
-  <time datetime="2017-08-17T05:23:50.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/settings-for-ssh/">UbuntuにSSHをインストールする</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-<span class="builtin-name">get</span> install openssh-server</div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-dev/settings-for-ip" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/settings-for-ip/" class="article-date">
-  <time datetime="2017-08-17T04:42:21.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/settings-for-ip/">UbuntuのIP設定</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<h4 id="設定ファイルを開く"><a href="#設定ファイルを開く" class="headerlink" title="設定ファイルを開く"></a>設定ファイルを開く</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> vi /etc/network/interfaces</span></div></pre></td></tr></table></figure>
-<h4 id="追記"><a href="#追記" class="headerlink" title="追記"></a>追記</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># The primary network interface</span></div><div class="line">auto eth0</div><div class="line">iface eth0 inet static</div><div class="line">   <span class="built_in"> address </span>10.0.0.41</div><div class="line">    netmask 255.255.255.0</div><div class="line">    gateway 10.0.0.1</div></pre></td></tr></table></figure>
-<h4 id="サービスの再起動"><a href="#サービスの再起動" class="headerlink" title="サービスの再起動"></a>サービスの再起動</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo<span class="built_in"> service </span>networking restart</div></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.swiftstack.com/docs/install/configure_networking.html" target="_blank" rel="noopener">Configure Networking on Ubuntu</a></p>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
-    <article id="post-dev/sublime-style-column-selection" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/08/17/dev/sublime-style-column-selection/" class="article-date">
-  <time datetime="2017-08-16T23:42:23.000Z" itemprop="datePublished">2017-08-17</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2017/08/17/dev/sublime-style-column-selection/">Atom Editor で矩形選択</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<p>Atom Editor で矩形選択</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm <span class="keyword">install</span> sublime-<span class="keyword">style</span>-<span class="keyword">column</span>-selection</div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li></ul>
-
 			</span>
 		</div>
 	</footer>

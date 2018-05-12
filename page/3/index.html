@@ -44,6 +44,220 @@
     <div id="main">
       
   
+    <article id="post-dev/20170801" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/08/01/dev/20170801/" class="article-date">
+  <time datetime="2017-08-01T14:39:34.000Z" itemprop="datePublished">2017-08-01</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/08/01/dev/20170801/">20170801</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>株式会社アカツキさん主催の「ソフトウェア品質勉強会」に会社の後輩と参加してきた。</p>
+<p><a href="https://connpass.com/event/61826/" target="_blank" rel="noopener">https://connpass.com/event/61826/</a></p>
+<p>最近IT勉強会に参加できいなかったのと、品質管理について知識を深めたかったからだ。</p>
+<p>アカツキさんはゲーム開発がメインの会社ということだった。おしゃれオフィスと、ホワイトボードにたくさん付箋の貼ってある光景が目を引いた。</p>
+<p>印象に残った内容はこのあたり。</p>
+<ul>
+<li>テストっていうのは「実行」だけじゃなくて、分析、設計、実装、実行を含むよ。あまり理解されていないけど</li>
+<li>新人に対してロールとキャリアプランをきちんと説明することで、動機づけに繋がるよ</li>
+<li>品質管理と開発は仲が悪くなりやすいけど、同じ目標をもって仲良くやりたいよね</li>
+<li>(テストにかぎらず)技術トラックにいくかマネジメントトラックにいくか考えるといいよ</li>
+</ul>
+<p>次はreactの勉強会に参加したい。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-etc/stop-quicksilver" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/29/etc/stop-quicksilver/" class="article-date">
+  <time datetime="2017-07-29T07:39:45.000Z" itemprop="datePublished">2017-07-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/29/etc/stop-quicksilver/">Quicksilverをやめた</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>Macを使いはじめた頃から使っていたランチャ Quicksilver の使用をやめた。</p>
+<p>きっかけはQuicksilverが起動時に固まることが多かったからだが、OS標準のSpotlightも機能が充実してきているようなので、しばらくSpotlightをメインで試用してみる。</p>
+<p>Quicksilverはbrew caskでインストールしていたので、アンインストールもbrew cask で行った。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span>cask uninstall quicksilver</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/postgres-on-macosx" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/29/dev/postgres-on-macosx/" class="article-date">
+  <time datetime="2017-07-29T07:34:12.000Z" itemprop="datePublished">2017-07-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/29/dev/postgres-on-macosx/">postgres-on-macosx</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p>MacOSXに開発用の<code>postgresql</code>を構築したときのメモ。</p>
+<h4 id="インストール"><a href="#インストール" class="headerlink" title="インストール"></a>インストール</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>postgresql</div></pre></td></tr></table></figure>
+<h4 id="サービスの起動とOS起動時の設定"><a href="#サービスの起動とOS起動時の設定" class="headerlink" title="サービスの起動とOS起動時の設定"></a>サービスの起動とOS起動時の設定</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> pg_ctl -D /usr/<span class="built_in">local</span>/var/postgres start &amp;&amp; brew $ services start postgresql</span></div></pre></td></tr></table></figure>
+<h4 id="postgresロールがなかったのでつくる"><a href="#postgresロールがなかったのでつくる" class="headerlink" title="postgresロールがなかったのでつくる"></a>postgresロールがなかったのでつくる</h4><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ /usr/local/Cellar/postgresql/9.6.3/bin/createuser -s postgres</div><div class="line">$ psql postgres</div><div class="line">postgres=# \du</div><div class="line"><span class="code">                                   List of roles</span></div><div class="line"><span class="section"> Role name |                         Attributes                         | Member of</span></div><div class="line">-----------+------------------------------------------------------------+-----------</div><div class="line"><span class="code"> postgres  | Superuser, Create role, Create DB                          | &#123;&#125;</span></div><div class="line"><span class="code"> shinya    | Superuser, Create role, Create DB, Replication, Bypass RLS | &#123;&#125;</span></div></pre></td></tr></table></figure>
+<h4 id="DB作成"><a href="#DB作成" class="headerlink" title="DB作成"></a>DB作成</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="regexp">/usr/</span>local<span class="regexp">/Cellar/</span>postgresql<span class="regexp">/9.6.3/</span>bin<span class="regexp">/createdb rslite -U postgres</span></div></pre></td></tr></table></figure>
+<h4 id="参考ページ"><a href="#参考ページ" class="headerlink" title="参考ページ"></a>参考ページ</h4><p><a href="https://www.codementor.io/devops/tutorial/getting-started-postgresql-server-mac-osx" target="_blank" rel="noopener">Getting Started with PostgreSQL on Mac OSX</a></p>
+<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist" target="_blank" rel="noopener">psql: FATAL: role “postgres” does not exist
+</a></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dev/">dev</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/create-react-app" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/07/27/dev/create-react-app/" class="article-date">
+  <time datetime="2017-07-26T15:22:13.000Z" itemprop="datePublished">2017-07-27</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2017/07/27/dev/create-react-app/">react テンプレート</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<p><a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a></p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">npm </span><span class="string">install </span>-g <span class="built_in">create-react-app</span></div><div class="line"></div><div class="line"><span class="built_in">create-react-app</span> <span class="string">my-app</span></div><div class="line"><span class="string">cd </span><span class="string">my-app/</span></div><div class="line"><span class="string">npm </span><span class="string">start</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react-dev/">react, dev</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-books/narnia1" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -147,57 +361,6 @@
 
 
   
-    <article id="post-dev/deployhexo" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2016/04/21/dev/deployhexo/" class="article-date">
-  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shinya Amemiya</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 itemprop="name" class="entry-title">
-      <a class="article-title" href="/2016/04/21/dev/deployhexo/">Deply hexo</a>
-    </h1>
-  
-
-	</header>
-	<div class="entry-content">
-		
-    	<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> clean</span></div><div class="line">$ npm <span class="keyword">run</span><span class="bash"> deploy</span></div></pre></td></tr></table></figure>
-
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </div>
-
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-</article>
-
-
-	<hr class="article-devider">
-
-
-
-  
     <article id="post-etc/heroku" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
@@ -232,6 +395,57 @@
 				
   <div class="article-category">
     <a class="article-category-link" href="/categories/nodejs-heroku/">nodejs, heroku</a>
+  </div>
+
+			</span>
+			<span class="tags">
+				
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
+    <article id="post-dev/deployhexo" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/04/21/dev/deployhexo/" class="article-date">
+  <time datetime="2016-04-20T15:00:00.000Z" itemprop="datePublished">2016-04-21</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/04/21/dev/deployhexo/">Deply hexo</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">run</span><span class="bash"> clean</span></div><div class="line">$ npm <span class="keyword">run</span><span class="bash"> deploy</span></div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
   </div>
 
 			</span>

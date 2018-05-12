@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Preparation for using Vuex | Snow Shovel</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Add vuex1yarn add -D vuex Make ./store/index.js1234567891011121314151617// ./store/index.jsimport Vue from &apos;vue&apos;import Vuex from &apos;vuex&apos;Vue.use(Vuex)const state = &amp;#123;&amp;#125;const getters = &amp;#123;&amp;#12">
+<meta name="keywords" content="vuejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Preparation for using Vuex">
+<meta property="og:url" content="http://blog.s-amemiya.com/2018/04/11/dev/2018/use-vuex/index.html">
+<meta property="og:site_name" content="Snow Shovel">
+<meta property="og:description" content="Add vuex1yarn add -D vuex Make ./store/index.js1234567891011121314151617// ./store/index.jsimport Vue from &apos;vue&apos;import Vuex from &apos;vuex&apos;Vue.use(Vuex)const state = &amp;#123;&amp;#125;const getters = &amp;#123;&amp;#12">
+<meta property="og:updated_time" content="2018-05-12T05:53:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Preparation for using Vuex">
+<meta name="twitter:description" content="Add vuex1yarn add -D vuex Make ./store/index.js1234567891011121314151617// ./store/index.jsimport Vue from &apos;vue&apos;import Vuex from &apos;vuex&apos;Vue.use(Vuex)const state = &amp;#123;&amp;#125;const getters = &amp;#123;&amp;#12">
+  
+    <link rel="alternative" href="/atom.xml" title="Snow Shovel" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.s-amemiya.com"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-dev/2018/use-vuex" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2018/04/11/dev/2018/use-vuex/" class="article-date">
+  <time datetime="2018-04-10T15:00:00.000Z" itemprop="datePublished">2018-04-11</time>
+</a>
+		</span>
+		<span class="meta-elements author">Shinya Amemiya</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Preparation for using Vuex
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="Add-vuex"><a href="#Add-vuex" class="headerlink" title="Add vuex"></a>Add vuex</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yarn add -D vuex</div></pre></td></tr></table></figure>
+<h1 id="Make-store-index-js"><a href="#Make-store-index-js" class="headerlink" title="Make ./store/index.js"></a>Make ./store/index.js</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./store/index.js</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line">Vue.use(Vuex)</div><div class="line"></div><div class="line"><span class="keyword">const</span> state = &#123;&#125;</div><div class="line"><span class="keyword">const</span> getters = &#123;&#125;</div><div class="line"><span class="keyword">const</span> actions = &#123;&#125;</div><div class="line"><span class="keyword">const</span> mutations = &#123;&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</div><div class="line">  state,</div><div class="line">  getters,</div><div class="line">  actions,</div><div class="line">  mutations</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h1 id="Modify-main-js"><a href="#Modify-main-js" class="headerlink" title="Modify ./main.js"></a>Modify ./main.js</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ./main.js</span></div><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></div><div class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'./router'</span></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span> <span class="comment">// added</span></div><div class="line"></div><div class="line">Vue.config.productionTip = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment">/* eslint-disable no-new */</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store, <span class="comment">// added</span></div><div class="line">  components: &#123; App &#125;,</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;App/&gt;'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuejs/">vuejs</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/09/dev/2018/linear-search-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linear search with JavaScript
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/15/dev/2018/disable-js-validation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          If flowtype is used, VSCode outs &#39;types&#39; can only be used in a .ts file.
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:blog.s-amemiya.com">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Snow Shovel</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2018 Shinya Amemiya<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
